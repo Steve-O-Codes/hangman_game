@@ -113,9 +113,8 @@ guesses = []
 
 while True:
     # take in a user guess and append to guesses list
-    user_guess = input('Guess a letter:\n')
-    guesses.append(user_guess)
-    
+    user_guess = input('Guess a letter:\n').lower()
+        
     # check if user has already guessed letter
     if user_guess in guesses:
         # if guessed already print below message and start loop again
@@ -123,6 +122,7 @@ while True:
         continue
     else:
         # else check if letter is in word
+        guesses.append(user_guess)
         check = check_replace(user_guess)
     # if check returns False
     # guess was not in random word
