@@ -75,7 +75,7 @@ stages = ['''
 # could also use random.choice(words_list)
 word_index = random.randint(0,len(words_list)-1)
 word = words_list[word_index]
-print(word)
+
 # generate blank list of word length
 word_length = len(word)
 guess_list = ["_"] * word_length
